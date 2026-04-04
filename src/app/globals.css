@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #ffffff;
+  --primary: #320904;
+  --secondary: #775751;
+  --on-surface: #1c1c1a;
+  --on-surface-variant: #534340;
+  --surface-container-low: #f6f3f0;
+  --surface-container-lowest: #ffffff;
+  --surface-container-high: #eae8e5;
+  --surface-container-highest: #e5e2df;
+  --primary-container: #4d1d15;
+  --on-primary: #ffffff;
+  --on-primary-container: #c88174;
+  --outline-variant: #d8c2be;
+}
+
+@theme inline {
+  --color-background: var(--surface);
+  --color-foreground: var(--on-surface);
+  --font-sans: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, a {
+  transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.hover-lift {
+  transition: all 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 40px 80px -20px rgba(50, 9, 4, 0.12);
+}
+
+.card-rounded {
+  border-radius: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .card-rounded {
+    border-radius: 1.5rem;
+  }
+}
