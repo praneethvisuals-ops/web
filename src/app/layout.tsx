@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white text-[#1c1c1a] antialiased overflow-x-hidden w-full m-0 p-0">
         <LoadingScreen />
         <Navbar />
-        <main className="pt-24 min-h-screen overflow-hidden w-full">{children}</main>
+        <main className="min-h-screen overflow-hidden w-full">{children}</main>
         <Footer />
         <a
           href="https://wa.me"

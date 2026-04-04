@@ -32,8 +32,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 z-[100] w-full bg-white/85 backdrop-blur-xl border-b border-[#ece8e6]/50">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:py-5">
+      <nav className="sticky top-0 z-[100] w-full bg-white/85 backdrop-blur-xl border-b border-[#ece8e6]/50">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:px-6 sm:py-5">
           <Link href="/" className="z-[110] flex items-center gap-2 transition-transform hover:scale-105 active:scale-95">
             <img src="/gallery-2.jpg" alt="Logo" className="h-7 w-7 rounded-sm object-cover shadow-sm" />
             <span className="text-xs font-black uppercase tracking-widest text-[#320904]">Praneeth Visuals</span>
