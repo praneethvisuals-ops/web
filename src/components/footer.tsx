@@ -10,10 +10,8 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-5">
-          <Link href="#">Privacy Policy</Link>
-          <Link href="#">Terms of Service</Link>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://wa.me" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="https://www.instagram.com/praneethvisuals/" target="_blank" rel="noreferrer" className="hover:text-[#320904] transition-colors">Instagram</a>
+          <a href="https://wa.me/919843412140?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20photography%20and%20video%20production%20services." target="_blank" rel="noreferrer" className="hover:text-[#320904] transition-colors">WhatsApp</a>
         </div>
       </div>
     </footer>

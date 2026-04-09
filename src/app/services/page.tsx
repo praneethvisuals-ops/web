@@ -98,7 +98,7 @@ export default function ServicesPage() {
 
           <article className="group relative overflow-hidden rounded-3xl">
             <img
-              src="/PHOTO-2026-03-20-19-23-02.jpg"
+              src="/IMG_3197.png"
               alt="Baby Shoots"
               className="h-[210px] w-full object-cover sm:h-[240px] lg:h-[250px]"
             />

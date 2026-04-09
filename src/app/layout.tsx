@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="min-h-screen overflow-hidden w-full">{children}</main>
         <Footer />
         <a
-          href="https://wa.me"
+          href="https://wa.me/919843412140?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20photography%20and%20video%20production%20services."
           target="_blank"
           rel="noreferrer"
           aria-label="Chat on WhatsApp"

@@ -86,6 +86,7 @@ export default function HomePage() {
                 desc: "High-end commercials, brand films, and cinematic reels that capture your message.",
                 span: "md:col-span-7 md:row-span-2",
                 featured: true,
+                image: "/IMG_1424.jpg",
                 icon: (
                   <svg className="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                     <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -96,6 +97,7 @@ export default function HomePage() {
                 title: "Photography",
                 desc: "From products to lifestyle, we freeze moments with artistic precision.",
                 span: "md:col-span-5",
+                image: "/IMG_1430.jpg",
                 icon: (
                   <svg className="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                     <path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
@@ -107,6 +109,7 @@ export default function HomePage() {
                 title: "Model Shoots",
                 desc: "Editorial and portfolio shoots designed to highlight persona and fashion.",
                 span: "md:col-span-5",
+                image: "/IMG_1425.jpg",
                 icon: (
                   <svg className="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                     <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -117,6 +120,7 @@ export default function HomePage() {
                 title: "Destination Weddings",
                 desc: "We travel globally to document your love story with a cinematic touch.",
                 span: "md:col-span-6",
+                image: "/wedding-1.jpg",
                 icon: (
                   <svg className="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                     <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -127,6 +131,7 @@ export default function HomePage() {
                 title: "Baby Shoots",
                 desc: "Newborn and milestone sessions with soft styling and a calm, gentle approach.",
                 span: "md:col-span-3",
+                image: "/IMG_3197.png",
                 icon: (
                   <svg className="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                     <path d="M12 21a8 8 0 100-16 8 8 0 000 16z" />
@@ -139,6 +144,7 @@ export default function HomePage() {
                 title: "Social Media",
                 desc: "Short-form, high-impact content optimized for Reels and social growth.",
                 span: "md:col-span-3",
+                image: "/IMG_5079.jpg",
                 icon: (
                   <svg className="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                     <path d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -153,7 +159,17 @@ export default function HomePage() {
                   key={item.title}
                   className={`group hover-lift card-rounded relative flex min-h-[220px] flex-col justify-between overflow-hidden border border-[#eadfd9] bg-[#f6f3f0] p-7 transition-all duration-500 hover:bg-[#4d1d15] md:p-10 ${item.span}`}
                 >
-                  <div className="flex items-start justify-between gap-6">
+                  {item.image && (
+                    <div className="absolute inset-0 z-0">
+                      <img
+                        src={item.image}
+                        className="h-full w-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-10 group-hover:scale-110"
+                        alt={item.title}
+                      />
+                      <div className="absolute inset-0 bg-[#4d1d15]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                  )}
+                  <div className="relative z-10 flex items-start justify-between gap-6">
                     <div
                       className={`flex items-center justify-center rounded-2xl bg-[#4d1d15] p-3 text-white transition-all duration-500 group-hover:bg-white group-hover:text-[#4d1d15] ${
                         isFeatured ? "h-16 w-16 md:h-20 md:w-20 md:p-5" : "h-12 w-12 md:h-16 md:w-16 md:p-4"
@@ -162,7 +178,7 @@ export default function HomePage() {
                       {item.icon}
                     </div>
                   </div>
-                  <div>
+                  <div className="relative z-10">
                     <h3
                       className={`mb-3 font-black text-[#320904] group-hover:text-white ${
                         isFeatured ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"
@@ -171,7 +187,7 @@ export default function HomePage() {
                       {item.title}
                     </h3>
                     <p
-                      className={`leading-relaxed text-[#534340] group-hover:text-white/75 ${
+                      className={`leading-relaxed text-[#534340] group-hover:text-white/85 ${
                         isFeatured ? "text-lg md:text-xl" : "text-base md:text-lg"
                       }`}
                     >
@@ -191,16 +207,16 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 gap-3 auto-rows-[130px] sm:gap-4 sm:auto-rows-[180px] md:grid-cols-4 md:auto-rows-[350px]">
             <div className="relative col-span-1 row-span-2 overflow-hidden rounded-xl md:col-span-2 md:row-span-2">
-              <img className="h-full w-full object-cover" src="/IMG_1430.jpg" alt="Featured Work 1" />
+              <img className="h-full w-full object-cover" src="/IMG_1430.jpg" alt="Fashion Photography" />
             </div>
             <div className="relative col-span-1 overflow-hidden rounded-xl md:col-span-2">
-              <img className="h-full w-full object-cover" src="/IMG_1424.jpg" alt="Featured Work 2" />
+              <img className="h-full w-full object-cover" src="/IMG_1424.jpg" alt="Commercial Production" />
             </div>
             <div className="relative overflow-hidden rounded-xl">
-              <img className="h-full w-full object-cover" src="/IMG_5079.jpg" alt="Featured Work 3" />
+              <img className="h-full w-full object-cover" src="/IMG_3197.png" alt="Baby Shoot" />
             </div>
             <div className="relative overflow-hidden rounded-xl">
-              <img className="h-full w-full object-cover" src="/IMG_1076.jpg" alt="Featured Work 4" />
+              <img className="h-full w-full object-cover" src="/IMG_5079.jpg" alt="Social Content" />
             </div>
           </div>
 
